@@ -34,7 +34,7 @@ In addition to the webpack entry file, there will be three scripts involved in t
 
 ### Implementation Timeline
 
-## Day 1: 
+### Day 1: 
 
 - Get webpack serving files
 - Write a basic entry file
@@ -42,17 +42,17 @@ In addition to the webpack entry file, there will be three scripts involved in t
 - Setup API requests: complete the data.js module
 
 
-## Day 2: 
+### Day 2: 
 - Continue learning technologies mentioned above
 - Notes on performance calulations
 - Complete the performance.js module
 
-## Day 3: 
+### Day 3: 
 - Complete the performanceSummary.js and performanceChart.js module
 
-## Day 4: 
+### Day 4: 
 - Work on styling
 - Complete the sectorChart.js
 
-## Day 5: 
+### Day 5: 
 - Complete styling
