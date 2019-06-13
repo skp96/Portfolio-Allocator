@@ -14,7 +14,7 @@ Portfolio Allocator is a data visualization tool built for investors to get an u
 
 This application will consist of a single screen with three input field where the user would be able to specify a minimum portfolio value, the desired timeframe (YTD,quarterly, and monthly), and sector exposure. 
 
-Based on the user's input, two charts will be rendered. One line chart depicting portfolio performance along with a pie chart detailing sector exposure. As the user hovers over the line chart, he/she will be able to see the value of their portfolio. As the user hovers over the pie chart, he/she will be able to see the respective sectors along with percentage allocated.
+Based on the user's input, a pie chart will be rendered. Depicting portfolio performance along sector exposure. As the user hovers over the pie chart, he/she will be able to see the respective sectors along with percentage allocated.
 
 ### Technologies and Architecture
 
@@ -29,7 +29,6 @@ In addition to the webpack entry file, there will be three scripts involved in t
 - data.js : handles the retrieval of data
 - performance.js : handles the performance calculations
 - performanceSummary.js: handles the rendering of visualizations for Summary 
-- performanceChart.js : handles the rendering of visualizations for linechart
 - sectorChart.js : handles the rendering of visualizations for piechart
 
 ### Implementation Timeline
@@ -48,7 +47,7 @@ In addition to the webpack entry file, there will be three scripts involved in t
 - Complete the performance.js module
 
 ### Day 3: 
-- Complete the performanceSummary.js and performanceChart.js module
+- Complete the performanceSummary.js
 
 ### Day 4: 
 - Work on styling
