@@ -28,7 +28,7 @@ function parseData(data) {
             parsedData["10 Year"] = oldData[key]
         }
     }
-    return parsedData;
+    return parsedData
 }
 
 export default parseData
