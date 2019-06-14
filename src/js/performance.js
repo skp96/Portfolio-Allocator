@@ -42,49 +42,54 @@ class PerformanceCalculation {
             ((parseFloat(this.data[this.timeFrame]["Utilities"])/100) * this.utilitiesWeights)
         ) + 1 ) * this.portfolioValue
 
-        performanceData["portfolioDollarAmount"] = portfolioDollarAmount
-        performanceData["communicationServices"] = ((parseFloat(this.data[this.timeFrame]["Communication Services"]) / 100) + 1) * (this.portfolioValue * this.communicationServicesWeights)
-        performanceData["consumerDiscretionary"] = ((parseFloat(this.data[this.timeFrame]["Consumer Discretionary"]) / 100) + 1) * (this.portfolioValue * this.consumerDiscretionaryWeights)
-        performanceData["consumerStaples"] = ((parseFloat(this.data[this.timeFrame]["Consumer Staples"]) / 100) + 1) * (this.portfolioValue * this.consumerStaplesWeights)
-        performanceData["energy"] = ((parseFloat(this.data[this.timeFrame]["Energy"]) / 100) + 1) * (this.portfolioValue * this.energyWeights)
-        performanceData["financials"] = ((parseFloat(this.data[this.timeFrame]["Financials"]) / 100) + 1) * (this.portfolioValue * this.financialsWeights)
-        performanceData["healthCare"] = ((parseFloat(this.data[this.timeFrame]["Health Care"]) / 100) + 1) * (this.portfolioValue * this.healthCareWeights)
-        performanceData["industrials"] = ((parseFloat(this.data[this.timeFrame]["Industrials"]) / 100) + 1) * (this.portfolioValue * this.industrialsWeights)
-        performanceData["informationTechnology"] = ((parseFloat(this.data[this.timeFrame]["Information Technology"]) / 100) + 1) * (this.portfolioValue * this.informationTechWeights)
-        performanceData["materials"] = ((parseFloat(this.data[this.timeFrame]["Materials"]) / 100) + 1) * (this.portfolioValue * this.materialsWeights)
-        performanceData["realEstate"] = ((parseFloat(this.data[this.timeFrame]["Real Estate"]) / 100) + 1) * (this.portfolioValue * this.realEstateWeights)
-        performanceData["utilities"] = ((parseFloat(this.data[this.timeFrame]["Utilities"]) / 100) + 1) * (this.portfolioValue * this.utilitiesWeights)
+        performanceData["Portfolio Value"] = portfolioDollarAmount
+        performanceData["Communication Services"] = ((parseFloat(this.data[this.timeFrame]["Communication Services"]) / 100) + 1) * (this.portfolioValue * this.communicationServicesWeights)
+        performanceData["Consumer Discretionary"] = ((parseFloat(this.data[this.timeFrame]["Consumer Discretionary"]) / 100) + 1) * (this.portfolioValue * this.consumerDiscretionaryWeights)
+        performanceData["Consumer Staples"] = ((parseFloat(this.data[this.timeFrame]["Consumer Staples"]) / 100) + 1) * (this.portfolioValue * this.consumerStaplesWeights)
+        performanceData["Energy"] = ((parseFloat(this.data[this.timeFrame]["Energy"]) / 100) + 1) * (this.portfolioValue * this.energyWeights)
+        performanceData["Financials"] = ((parseFloat(this.data[this.timeFrame]["Financials"]) / 100) + 1) * (this.portfolioValue * this.financialsWeights)
+        performanceData["Health Care"] = ((parseFloat(this.data[this.timeFrame]["Health Care"]) / 100) + 1) * (this.portfolioValue * this.healthCareWeights)
+        performanceData["Industrials"] = ((parseFloat(this.data[this.timeFrame]["Industrials"]) / 100) + 1) * (this.portfolioValue * this.industrialsWeights)
+        performanceData["Information Technology"] = ((parseFloat(this.data[this.timeFrame]["Information Technology"]) / 100) + 1) * (this.portfolioValue * this.informationTechWeights)
+        performanceData["Materials"] = ((parseFloat(this.data[this.timeFrame]["Materials"]) / 100) + 1) * (this.portfolioValue * this.materialsWeights)
+        performanceData["Real Estate"] = ((parseFloat(this.data[this.timeFrame]["Real Estate"]) / 100) + 1) * (this.portfolioValue * this.realEstateWeights)
+        performanceData["Utilities"] = ((parseFloat(this.data[this.timeFrame]["Utilities"]) / 100) + 1) * (this.portfolioValue * this.utilitiesWeights)
 
 
         let dataArray = []
+        let timeFrame = this.timeFrame
+        let newPortValue = performanceData["Portfolio Value"]
+        
+        
         for (let key in performanceData) {
-            dataArray.push({ [key]: performanceData[key] })
+                dataArray.push({ ["sector"]: key, ["value"]: performanceData[key], ["timeframe"]: timeFrame, ["portValue"]: newPortValue })
+            
         }
         for (let i = 0; i < dataArray.length; i++) {
-            if (Object.keys(dataArray[i]).includes("portfolioDollarAmount")) {
-                dataArray[i]["fill"] = "lightgrey"
-            } else if (Object.keys(dataArray[i]).includes("communicationServices")) {
-                dataArray[i]["fill"] = "lightred"
-            } else if (Object.keys(dataArray[i]).includes("consumerDiscretionary")) {
-                dataArray[i]["fill"] = "lightblue"
-            } else if (Object.keys(dataArray[i]).includes("consumerStaples")) {
-                dataArray[i]["fill"] = "lightorange"
-            } else if (Object.keys(dataArray[i]).includes("energy")) {
-                dataArray[i]["fill"] = "lightyellow"
-            } else if (Object.keys(dataArray[i]).includes("financials")) {
-                dataArray[i]["fill"] = "lightgreen"
-            } else if (Object.keys(dataArray[i]).includes("healthCare")) {
-                dataArray[i]["fill"] = "lightpurple"
-            } else if (Object.keys(dataArray[i]).includes("industrials")) {
-                dataArray[i]["fill"] = "green"
-            } else if (Object.keys(dataArray[i]).includes("informationTechnology")) {
-                dataArray[i]["fill"] = "blue"
-            } else if (Object.keys(dataArray[i]).includes("materials")) {
-                dataArray[i]["fill"] = "red"
-            } else if (Object.keys(dataArray[i]).includes("realEstate")) {
-                dataArray[i]["fill"] = " black"
-            } else if (Object.keys(dataArray[i]).includes("utilities")) {
-                dataArray[i]["fill"] = "orange"
+            if (Object.values(dataArray[i]).includes("Portfolio Value")) {
+                dataArray[i]["fill"] = "#9370DB"
+            }else if (Object.values(dataArray[i]).includes("Communication Services")) {
+                dataArray[i]["fill"] = "#4f81bd"
+            } else if (Object.values(dataArray[i]).includes("Consumer Discretionary")) {
+                dataArray[i]["fill"] = "#772c2a"
+            } else if (Object.values(dataArray[i]).includes("Consumer Staples")) {
+                dataArray[i]["fill"] = "#f79646"
+            } else if (Object.values(dataArray[i]).includes("Energy")) {
+                dataArray[i]["fill"] = "#4bacc5"
+            } else if (Object.values(dataArray[i]).includes("Financials")) {
+                dataArray[i]["fill"] = "#4d3b62"
+            } else if (Object.values(dataArray[i]).includes("Health Care")) {
+                dataArray[i]["fill"] = "#5e7530"
+            } else if (Object.values(dataArray[i]).includes("Industrials")) {
+                dataArray[i]["fill"] = "#2c4d75"
+            } else if (Object.values(dataArray[i]).includes("Information Technology")) {
+                dataArray[i]["fill"] = "#27697c"
+            } else if (Object.values(dataArray[i]).includes("Materials")) {
+                dataArray[i]["fill"] = "#8164a2"
+            } else if (Object.values(dataArray[i]).includes("Real Estate")) {
+                dataArray[i]["fill"] = "#c0504d"
+            } else if (Object.values(dataArray[i]).includes("Utilities")) {
+                dataArray[i]["fill"] = "#9cbb59"
             }
         }
         return dataArray
