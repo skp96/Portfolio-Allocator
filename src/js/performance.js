@@ -42,7 +42,7 @@ class PerformanceCalculation {
             ((parseFloat(this.data[this.timeFrame]["Utilities"])/100) * this.utilitiesWeights)
         ) + 1 ) * this.portfolioValue
 
-        performanceData["Portfolio Value"] = portfolioDollarAmount
+        performanceData["Portfolio"] = portfolioDollarAmount
         performanceData["Communication Services"] = ((parseFloat(this.data[this.timeFrame]["Communication Services"]) / 100) + 1) * (this.portfolioValue * this.communicationServicesWeights)
         performanceData["Consumer Discretionary"] = ((parseFloat(this.data[this.timeFrame]["Consumer Discretionary"]) / 100) + 1) * (this.portfolioValue * this.consumerDiscretionaryWeights)
         performanceData["Consumer Staples"] = ((parseFloat(this.data[this.timeFrame]["Consumer Staples"]) / 100) + 1) * (this.portfolioValue * this.consumerStaplesWeights)
@@ -58,15 +58,21 @@ class PerformanceCalculation {
 
         let dataArray = []
         let timeFrame = this.timeFrame
-        let newPortValue = performanceData["Portfolio Value"]
-        
+        let newPortValue = performanceData["Portfolio"]
+        let data = this.data
+        let portfolioReturn = (((newPortValue / this.portfolioValue) - 1) * 100).toFixed(2).toString() + "%"
         
         for (let key in performanceData) {
-                dataArray.push({ ["sector"]: key, ["value"]: performanceData[key], ["timeframe"]: timeFrame, ["portValue"]: newPortValue })
+            if (key === "Portfolio Value") {
+                dataArray.push({ ["sector"]: key, ["value"]: performanceData[key], ["timeframe"]: timeFrame, ["portValue"]: newPortValue, ["return"]: portfolioReturn })
+            } else {
+                dataArray.push({ ["sector"]: key, ["value"]: performanceData[key], ["timeframe"]: timeFrame, ["portValue"]: newPortValue, ["return"]: data[timeFrame][key] })
+            }
+                
             
         }
         for (let i = 0; i < dataArray.length; i++) {
-            if (Object.values(dataArray[i]).includes("Portfolio Value")) {
+            if (Object.values(dataArray[i]).includes("Portfolio")) {
                 dataArray[i]["fill"] = "#9370DB"
             }else if (Object.values(dataArray[i]).includes("Communication Services")) {
                 dataArray[i]["fill"] = "#4f81bd"

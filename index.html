@@ -3,11 +3,79 @@
     <head>
         <title>Portfolio Allocator</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+        <link href="./src/css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
     </head>
     <body>
 
-
         <div id="chart"></div>
+
+        <form class="input-form">
+            <h1 class="header">Portfolio Allocator</h1>
+            <label>
+                Communication Services
+                <input type="number" min= "0" max ="100"name="Communication Services" />
+            </label>
+
+            <label>
+                Consumer Discretionary
+                <input type="number" min= "0" max ="100" name="Consumer Discretionary" />
+            </label>
+
+            <label>
+                Consumer Staples
+                <input type="number" min= "0" max ="100" name="Consumer Staples" />
+            </label>
+
+            <label>
+                Energy
+                <input type="number" min= "0" max ="100" name="Energy" />
+            </label>
+
+            <label>
+                Financials
+                <input type="number" min= "0" max ="100" name="Finanacials" />
+            </label>
+
+            <label>
+                Health Care
+                <input type="number" min= "0" max ="100" name="Health Care" />
+            </label>
+
+            <label>
+                Industrials
+                <input type="number" min= "0" max ="100" name="Industrials" />
+            </label>
+
+            <label>
+                Information Technology
+                <input type="number" min= "0" max ="100" name="Information Technology" />
+            </label>
+
+            <label>
+                Materials
+                <input type="number" min= "0" max ="100" name="Materials" />
+            </label>
+
+            <label>
+                Real Estate
+                <input type="number" min= "0" max ="100" name="Real Estate" />
+            </label>
+
+            <label>
+                Utilities
+                <input type="number" min= "0" max ="100" name="Utilities" />
+            </label>
+
+            <label>
+                Portfolio
+                <input type="number" name="Portfolio">
+            </label>
+
+            <input type="submit" value="Submit" id="submit-button" />
+            
+        </form>
+
         <script src="./dist/bundle.js"></script>
     </body>
 
