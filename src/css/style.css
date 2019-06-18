@@ -42,10 +42,11 @@ label {
     cursor: pointer;
     outline: none; 
     border-style: solid;
-    border-color: rgb(10, 75, 97)
+    border-color: rgb(10, 75, 97);
 }
 
 .input-form input:focus {
+    cursor: pointer;
     outline: none; 
     border-style: solid;
     border-color: rgb(10, 75, 97)

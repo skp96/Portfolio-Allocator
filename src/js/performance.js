@@ -60,10 +60,11 @@ class PerformanceCalculation {
         let timeFrame = this.timeFrame
         let newPortValue = performanceData["Portfolio"]
         let data = this.data
+        
         let portfolioReturn = (((newPortValue / this.portfolioValue) - 1) * 100).toFixed(2).toString() + "%"
         
         for (let key in performanceData) {
-            if (key === "Portfolio Value") {
+            if (key === "Portfolio") {
                 dataArray.push({ ["sector"]: key, ["value"]: performanceData[key], ["timeframe"]: timeFrame, ["portValue"]: newPortValue, ["return"]: portfolioReturn })
             } else {
                 dataArray.push({ ["sector"]: key, ["value"]: performanceData[key], ["timeframe"]: timeFrame, ["portValue"]: newPortValue, ["return"]: data[timeFrame][key] })
