@@ -41,7 +41,6 @@ class PerformanceCalculation {
             ((parseFloat(this.data[this.timeFrame]["Real Estate"])/100) * this.realEstateWeights) +
             ((parseFloat(this.data[this.timeFrame]["Utilities"])/100) * this.utilitiesWeights)
         ) + 1 ) * this.portfolioValue
-
         performanceData["Portfolio"] = portfolioDollarAmount
         performanceData["Communication Services"] = ((parseFloat(this.data[this.timeFrame]["Communication Services"]) / 100) + 1) * (this.portfolioValue * this.communicationServicesWeights)
         performanceData["Consumer Discretionary"] = ((parseFloat(this.data[this.timeFrame]["Consumer Discretionary"]) / 100) + 1) * (this.portfolioValue * this.consumerDiscretionaryWeights)

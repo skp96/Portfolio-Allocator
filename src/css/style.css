@@ -1,13 +1,102 @@
 body {
     display: flex;
-    justify-content: space-between
+}
+
+.instructions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-color:  rgb(10, 75, 97);
+    border-radius: 5px;
+    position: absolute;
+    height: 70%;
+    top: 100px;
+    left: 80px;
+    width: 60%;
+    flex-direction: column;
+}
+
+.instructions h1{
+    color:  rgb(10, 75, 97);
+}
+
+.instructions h1, p, li {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.instructions-button {
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: rgb(10, 75, 97);
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+    width: 20%;
+}
+
+.instructions-button:hover {
+    box-sizing: border-box;
+    background-color: rgb(19, 123, 158);
+    border-color:  rgb(10, 75, 97);
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+    width: 20%;
+}
+
+ul {
+    list-style: none
+}
+ul li::before {
+    content: "\2022"; 
+    color:  rgb(10, 75, 97);
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #chart {
+    height: 750px;
+    width: 800px;
 }
 
+.hide {
+    display: none;
+}
+
+#timeframe-buttons button {
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: rgb(10, 75, 97);
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 15px;
+    border-radius: 10px;
+    margin: 10px 40px 20px 0px;
+    /* padding: 15px 40px 15px 40px; */
+    width: 10%;
+}
+
+#timeframe-buttons button:hover {
+    cursor: pointer;
+    outline: 0; 
+    border-style: solid;
+    border-color:  rgb(10, 75, 97);
+    background-color: rgb(19, 123, 158);
+}
+
+#timeframe-buttons button:focus {
+    cursor: pointer;
+    outline: 0;
+    border-style: solid;
+    border-color: rgb(10, 75, 97)
+}
+
+
 .input-form {
-    margin: 15px 0px 100px 0px;
+    margin: 3px 0px 100px 0px;
     padding: 0 75px;
     width: 50vw;
     height: 50vh;
@@ -35,7 +124,7 @@ label {
     border: 1px solid lightgray;
     border-color: lightgray;
     border-radius: 4px;
-    width: 100%;
+    width: 100%
 }
 
 .input-form input:hover {
@@ -55,6 +144,17 @@ label {
 #submit-button {
     box-sizing: border-box;
     background-color: rgb(10, 75, 97);
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 15px 40px 15px 40px;
+    width: 100%;
+}
+
+#submit-button:hover {
+    box-sizing: border-box;
+    background-color: rgb(19, 123, 158);
+    border-color:  rgb(10, 75, 97);
     color: white;
     font-size: 15px;
     border-radius: 10px;

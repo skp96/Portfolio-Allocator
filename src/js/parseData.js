@@ -17,7 +17,7 @@ function parseData(data) {
         } else if (key === "Rank E: 3 Month Performance") {
             parsedData["3 Month"] = oldData[key]
         } else if (key === "Rank F: Year-to-Date (YTD) Performance") {
-            parsedData["Year-to-Date"] = oldData[key]
+            parsedData["YTD"] = oldData[key]
         } else if (key === "Rank G: 1 Year Performance") {
             parsedData["1 Year"] = oldData[key]
         } else if (key === "Rank H: 3 Year Performance") {
