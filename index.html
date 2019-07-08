@@ -7,95 +7,97 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="instructions" id="instructions">
-            <h1>Welcome to Portfolio Allocator!</h1>
-            <p>Are you ready to build your own portfolio and see how you would perform in the market?</p>
-            <p>Instructions:</p>
-            <ul>
-                <li>Input the weight for each sector within your portfolio, feel free to omit the sectors that are not <br/> included in your portfolio!</li>
-                <li>Insert your starting portfolio value and press submit.</li>
-                <li>In order to see how your portfolio would grow over various periods, click on the timefram buttons located at the top of the page</li>
-                <li>Get ready to watch your assets grow!</li>
-            </ul>
-            <button class="instructions-button" id="continue">Continue</button>
-        </div>
-        <div class="chart-items">
-            <div id="timeframe-buttons">
-                <button class="timeframe-button">1 Month</button>
-                <button class="timeframe-button">3 Month</button>
-                <button class="timeframe-button">YTD</button>
+        <div class="main">
+            <div class="instructions" id="instructions">
+                <h1>Welcome to Portfolio Allocator!</h1>
+                <p>Are you ready to build your own portfolio and see how you would perform in the market?</p>
+                <p>Instructions:</p>
+                <ul>
+                    <li>Input the weight for each sector within your portfolio, feel free to omit the sectors that are not <br/> included in your portfolio!</li>
+                    <li>Insert your starting portfolio value and press submit.</li>
+                    <li>In order to see how your portfolio would grow over various periods, click on the timeframe buttons located at the top of the page</li>
+                    <li>Get ready to watch your assets grow!</li>
+                </ul>
+                <button class="instructions-button" id="continue">Continue</button>
+            </div>
+            <div class="chart-items">
+                <div id="timeframe-buttons">
+                    <button class="timeframe-button">1 Month</button>
+                    <button class="timeframe-button">3 Month</button>
+                    <button class="timeframe-button">YTD</button>
+                </div>
+
+                <div id="chart"></div>
             </div>
 
-            <div id="chart"></div>
+            <form class="input-form">
+                <h1 class="header">Portfolio Allocator</h1>
+                <label>
+                    Communication Services
+                    <input type="number" min= "0" max ="100" id="communication-services" value= "0" />
+                </label>
+
+                <label>
+                    Consumer Discretionary
+                    <input type="number" min= "0" max ="100" id="consumer-discretionary" value= "0" />
+                </label>
+
+                <label>
+                    Consumer Staples
+                    <input type="number" min= "0" max ="100" id="consumer-staples" value= "0"/>
+                </label>
+
+                <label>
+                    Energy
+                    <input type="number" min= "0" max ="100" id="energy"  value= "0" />
+                </label>
+
+                <label>
+                    Financials
+                    <input type="number" min= "0" max ="100" id="finanacials" value= "0" />
+                </label>
+
+                <label>
+                    Health Care
+                    <input type="number" min= "0" max ="100" id="health-care" value= "0" />
+                </label>
+
+                <label>
+                    Industrials
+                    <input type="number" min= "0" max ="100" id="industrials" value= "0" />
+                </label>
+
+                <label>
+                    Information Technology
+                    <input type="number" min= "0" max ="100" id="information-technology" value= "0" />
+                </label>
+
+                <label>
+                    Materials
+                    <input type="number" min= "0" max ="100" id="materials" value= "0" />
+                </label>
+
+                <label>
+                    Real Estate
+                    <input type="number" min= "0" max ="100" id="real-estate" value= "0" />
+                </label>
+
+                <label>
+                    Utilities
+                    <input type="number" min= "0" max ="100" id="utilities" value= "0" />
+                </label>
+
+                <label>
+                    Portfolio
+                    <input type="number" id="portfolio" value= "0">
+                </label>
+
+                <input type="submit" value="Submit" id="submit-button"/>
+                
+            </form>
+
+            <script src="./dist/bundle.js"></script>
         </div>
-
-        <form class="input-form">
-            <h1 class="header">Portfolio Allocator</h1>
-            <label>
-                Communication Services
-                <input type="number" min= "0" max ="100" id="communication-services" value= "0" />
-            </label>
-
-            <label>
-                Consumer Discretionary
-                <input type="number" min= "0" max ="100" id="consumer-discretionary" value= "0" />
-            </label>
-
-            <label>
-                Consumer Staples
-                <input type="number" min= "0" max ="100" id="consumer-staples" value= "0"/>
-            </label>
-
-            <label>
-                Energy
-                <input type="number" min= "0" max ="100" id="energy"  value= "0" />
-            </label>
-
-            <label>
-                Financials
-                <input type="number" min= "0" max ="100" id="finanacials" value= "0" />
-            </label>
-
-            <label>
-                Health Care
-                <input type="number" min= "0" max ="100" id="health-care" value= "0" />
-            </label>
-
-            <label>
-                Industrials
-                <input type="number" min= "0" max ="100" id="industrials" value= "0" />
-            </label>
-
-            <label>
-                Information Technology
-                <input type="number" min= "0" max ="100" id="information-technology" value= "0" />
-            </label>
-
-            <label>
-                Materials
-                <input type="number" min= "0" max ="100" id="materials" value= "0" />
-            </label>
-
-            <label>
-                Real Estate
-                <input type="number" min= "0" max ="100" id="real-estate" value= "0" />
-            </label>
-
-            <label>
-                Utilities
-                <input type="number" min= "0" max ="100" id="utilities" value= "0" />
-            </label>
-
-            <label>
-                Portfolio
-                <input type="number" id="portfolio" value= "0">
-            </label>
-
-            <input type="submit" value="Submit" id="submit-button"/>
-            
-        </form>
-
-        <script src="./dist/bundle.js"></script>
     </body>
 
 </html>

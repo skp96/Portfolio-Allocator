@@ -1,4 +1,4 @@
-body {
+.main {
     display: flex;
 }
 
@@ -7,14 +7,17 @@ body {
     justify-content: center;
     align-items: center;
     border: 1px solid;
-    border-color:  rgb(10, 75, 97);
+    border-color: rgb(10, 75, 97);
     border-radius: 5px;
     position: absolute;
-    height: 70%;
-    top: 100px;
-    left: 80px;
-    width: 60%;
+    height: 65%;
+    top: 56px;
+    left: 3%;
     flex-direction: column;
+}
+
+.instructions ul li {
+    padding-right: 20px;
 }
 
 .instructions h1{
