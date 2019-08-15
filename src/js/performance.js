@@ -1,12 +1,3 @@
-// set up performance class
-// an instance of the performance class should have the following 
-// attributes: (1) the data, (2) user's input for Communication Services,
-// (3) user's input for Consumer Discretionary, (4) user's input for Consumer Staples,
-// (5) user's input for Energy, (6) user's input for Financials, (7) user's input for Health Care,
-// (8) user's input for Industrials, (9) user's input for Information Technology,
-// (10) user's input for Materials, (11) user's input for Real Estate, (12) user's input for Utilities
-// (11) portfolio value, (12) user's timeframe
-
 class PerformanceCalculation {
     constructor(data, communicationServices, consumerDiscretionary, consumerStaples, energy, financials, healthCare, industrials, informationTech, materials, realEstate, utilities, portfolioValue, timeFrame) {
         this.data = data;

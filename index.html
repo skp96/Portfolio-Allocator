@@ -22,7 +22,7 @@
                 <p>Are you ready to build your own portfolio and see how you would perform in the market?</p>
                 <p>Instructions:</p>
                 <ul>
-                    <li>Input the weight for each sector within your portfolio, feel free to omit the sectors that are not <br/> included in your portfolio!</li>
+                    <li>Select the weight for each sector within your portfolio by sliding the thumb controller, feel free to omit the sectors that you do <br/> not want included in your portfolio.</li>
                     <li>Insert your starting portfolio value and press submit.</li>
                     <li>In order to see how your portfolio would grow over various periods, click on the timeframe buttons located at the top of the page</li>
                     <li>Get ready to watch your assets grow!</li>
@@ -34,74 +34,81 @@
                     <button class="timeframe-button">1 Month</button>
                     <button class="timeframe-button">3 Month</button>
                     <button class="timeframe-button">YTD</button>
+                    <span class="counter">
+                        <span>Total:</span>
+                        <span id="count">0%</span>
+                    </span>
+                    
                 </div>
-
                 <div id="chart"></div>
             </div>
 
             <form class="input-form">
                 <h1 class="header">Portfolio Allocator</h1>
-                <label>
-                    Communication Services
-                    <input type="number" min= "0" max ="100" id="communication-services" value= "0" />
-                </label>
+                <div class="slidecontainer">
+                    <label>
+                        Communication Services
+                        <input type="range" min= "0" max ="100" id="communication-services" id="sector" value= "0" class="slider" />
+                    </label>
 
-                <label>
-                    Consumer Discretionary
-                    <input type="number" min= "0" max ="100" id="consumer-discretionary" value= "0" />
-                </label>
+                    <label>
+                        Consumer Discretionary
+                        <input type="range" min= "0" max ="100" id="consumer-discretionary" id="sector" value= "0" class="slider" />
+                    </label>
 
-                <label>
-                    Consumer Staples
-                    <input type="number" min= "0" max ="100" id="consumer-staples" value= "0"/>
-                </label>
+                    <label>
+                        Consumer Staples
+                        <input type="range" min= "0" max ="100" id="consumer-staples" id="sector" value= "0" class="slider"/>
+                    </label>
 
-                <label>
-                    Energy
-                    <input type="number" min= "0" max ="100" id="energy"  value= "0" />
-                </label>
+                    <label>
+                        Energy
+                        <input type="range" min= "0" max ="100" id="energy" id="sector" value= "0" class="slider" />
+                    </label>
 
-                <label>
-                    Financials
-                    <input type="number" min= "0" max ="100" id="finanacials" value= "0" />
-                </label>
+                    <label>
+                        Financials
+                        <input type="range" min= "0" max ="100" id="finanacials" id="sector" value= "0" class="slider" />
+                    </label>
 
-                <label>
-                    Health Care
-                    <input type="number" min= "0" max ="100" id="health-care" value= "0" />
-                </label>
+                    <label>
+                        Health Care
+                        <input type="range" min= "0" max ="100" id="health-care" id="sector" value= "0" class="slider" />
+                    </label>
 
-                <label>
-                    Industrials
-                    <input type="number" min= "0" max ="100" id="industrials" value= "0" />
-                </label>
+                    <label>
+                        Industrials
+                        <input type="range" min= "0" max ="100" id="industrials" id="sector" value= "0" class="slider" />
+                    </label>
 
-                <label>
-                    Information Technology
-                    <input type="number" min= "0" max ="100" id="information-technology" value= "0" />
-                </label>
+                    <label>
+                        Information Technology
+                        <input type="range" min= "0" max ="100" id="information-technology" id="sector" value= "0" class="slider" />
+                    </label>
 
-                <label>
-                    Materials
-                    <input type="number" min= "0" max ="100" id="materials" value= "0" />
-                </label>
+                    <label>
+                        Materials
+                        <input type="range" min= "0" max ="100" id="materials" id="sector" value= "0" class="slider" />
+                    </label>
 
-                <label>
-                    Real Estate
-                    <input type="number" min= "0" max ="100" id="real-estate" value= "0" />
-                </label>
+                    <label>
+                        Real Estate
+                        <input type="range" min= "0" max ="100" id="real-estate" id="sector" value= "0" class="slider" />
+                    </label>
 
-                <label>
-                    Utilities
-                    <input type="number" min= "0" max ="100" id="utilities" value= "0" />
-                </label>
+                    <label>
+                        Utilities
+                        <input type="range" min= "0" max ="100" id="utilities" id="sector" value= "0" class="slider" />
+                    </label>
 
-                <label>
-                    Portfolio
-                    <input type="number" id="portfolio" value= "0">
-                </label>
-
-                <input type="submit" value="Submit" id="submit-button"/>
+                    <label>
+                        Portfolio
+                        <input type="text" id="portfolio" placeholder="0" >
+                    </label>
+                </div>
+                <span class="error"></span>
+                <input type="submit" value="Submit" id="submit-button" />
+                
                 
             </form>
 
