@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
         let count = parseInt(document.querySelector("#count").innerHTML.split("%")[0])
         let portfolioValue = document.querySelector("#portfolio")
         let error = document.querySelector(".error")
-        debugger
         if (count === 100) {
 
             let communicationServices = parseInt(document.getElementById("communication-services").value) / 100
